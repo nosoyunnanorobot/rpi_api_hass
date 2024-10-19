@@ -1,0 +1,14 @@
+version: "3.8"
+
+services:
+  fastapi-monitor:
+    image: fastapi-monitor
+    restart: always
+    ports:
+      - 8000:8000
+    environment:
+      - LOG=debug
+    volumes:
+      - /home/pi/docker/monitor/src:/usr/src/app
+      - /mnt/d3682f49-6a14-2740-b8b4-a5c0a9117cfd:/mnt/d3682f49
+      - /mnt/2351bf86-d053-2f4f-87d4-c0b153031f55:/mnt/2351bf86
